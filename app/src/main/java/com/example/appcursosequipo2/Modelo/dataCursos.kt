@@ -14,4 +14,5 @@ data class dataCursos(
     @SerialName(value = "dias")val dias: String?=null,
     @SerialName(value = "cupo")val cupo: Int?=null,
     @SerialName(value = "imagen_utl")val imagenurl: String?=null
+
 )

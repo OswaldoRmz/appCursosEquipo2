@@ -8,6 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiServicio {
+    //obtenemos los cursos
     @GET(value = "obtener_carreras.php")
     suspend fun obtenerCarreras(): List<dataCarreras>
 
