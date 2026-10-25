@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".detalleCursoActivity"
+            android:name=".Vista.detalleCursoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
