@@ -5,15 +5,129 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.MainActivity">
+    tools:context=".Vista.MainActivity"
+    android:background="#F5F7FA">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/principal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#F5F7FA"
+
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- diseño para la barra -->
+    <LinearLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="12dp"
+        android:background="#085394">
+
+        <!-- titulo -->
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="CÁTALOGO DE CURSOS"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp">
+
+        <!-- filtro para las carreras -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <!-- imagen para la carreras -->
+                <ImageView
+                    android:id="@+id/imgCarrera"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Imagen de carrera" />
+
+                <!-- no me acuerdo -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <!-- texto -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Filtrar por carrera"
+                        android:textColor="#333333"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <!-- spinner -->
+                    <Spinner
+                        android:id="@+id/snpCarreras"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCursos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
