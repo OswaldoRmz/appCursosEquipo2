@@ -107,7 +107,7 @@
                     <Spinner
                         android:id="@+id/snpCarreras"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"/>
+                        android:layout_height="48dp"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
