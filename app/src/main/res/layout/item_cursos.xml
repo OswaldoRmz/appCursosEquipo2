@@ -1,52 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-    <!-- pendiente dar diseño a las tarjetas -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
 
+        <!-- Imagen del Curso -->
         <ImageView
             android:id="@+id/imgCurso"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars" />
 
+        <!-- Nombre del Curso -->
         <TextView
             android:id="@+id/txtNombreCursos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            tools:text="PROGRAMACIÓN AVANZADA" />
 
+        <!-- Salón / Ubicación -->
         <TextView
             android:id="@+id/txtEspacio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#555555"
+            android:layout_marginTop="2dp"
+            tools:text="Salón: A-102" />
 
+        <!-- Contenedor de Botones -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
-            <Button
-                android:id="@+id/btnInscribirse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" />
-
+            <!-- Botón Ver Detalle (Azul) -->
             <Button
                 android:id="@+id/btnDetalle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:layout_marginEnd="4dp"
+                android:text="VER DETALLE"
+                android:textSize="10sp"
+                android:backgroundTint="#0D47A1" />
+
+            <!-- Botón Registrarse (Verde) -->
+            <Button
+                android:id="@+id/btnInscribirse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="REGISTRARSE"
+                android:textSize="10sp"
+                android:backgroundTint="#2E7D32" />
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
