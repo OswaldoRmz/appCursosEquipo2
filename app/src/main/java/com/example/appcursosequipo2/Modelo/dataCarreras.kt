@@ -5,7 +5,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class dataCarreras(
-    @SerialName(value = "id_carrera")val idCarrera: Int=0,
-    @SerialName(value = "nombre")val nombre: String=""
+    @SerialName(value = "id_carrera") val id: Int = 0,
+    @SerialName(value = "nombre") val carrera: String = ""
+
 
 )

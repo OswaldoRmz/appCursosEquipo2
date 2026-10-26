@@ -85,6 +85,7 @@
                 android:inputType="number"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
+                android:textColor="#000000"
                 android:textSize="16sp" />
 
             <!-- Fecha -->
@@ -103,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="DD/MM/YY"
-                android:inputType="date" />
+                android:inputType="date"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -124,6 +126,7 @@
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
+                android:textColor="#000000"
                 android:textSize="16sp" />
 
             <Button
