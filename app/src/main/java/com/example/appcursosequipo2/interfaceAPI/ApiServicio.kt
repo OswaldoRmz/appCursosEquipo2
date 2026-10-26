@@ -2,16 +2,29 @@ package com.example.appcursosequipo2.interfaceAPI
 
 import com.example.appcursosequipo2.Modelo.dataCarreras
 import com.example.appcursosequipo2.Modelo.dataCursos
-
+import retrofit2.Call
 
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiServicio {
-    //obtenemos los cursos
-    @GET(value = "obtener_carreras.php")
-    suspend fun obtenerCarreras(): List<dataCarreras>
+    @GET("obtener_carreras.php")
+    fun getCarreras(): Call<List<dataCarreras>>
 
-    @GET(value = "obtener_cursos.php")
-    suspend fun obtenerCursos(@Query(value = "id_carrera")idCarrera: Int): List<dataCursos>
+    @GET("obtener_cursos.php")
+    fun getCursos(@Query("id_carrera") idCarrera: Int? = null): Call<List<dataCursos>>
+
+    // Buscar alumno por matrícula (GET)
+    /*@GET("inscribir_alumno.php")
+    fun buscarAlumnoByMatricula(
+        @Query("matricula") matricula: Int
+    ): //Call<dataBuscarAlumno>
+
+    // Registrar inscripción (POST)
+    @POST("inscribir_alumno.php")
+    fun registrarInscripcion(
+        @Body request: RegistroRequest
+    ): Call<RegistroResponse>
+    @GET(value = "obtener_estado_inscripciones.php")
+    suspend fun obtenerEstadoInscripciones(@Query(value = "carrera_id") carreraId: Int): dataEstadoInscripciones*/
 }

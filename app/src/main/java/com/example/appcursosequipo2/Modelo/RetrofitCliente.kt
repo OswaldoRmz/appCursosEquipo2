@@ -8,7 +8,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import kotlin.lazy
 
 object RetrofitCliente {
-    private const val BASE_URL = "http://192.168.0.103/cursos_api/"; //aqui va la url del api
+    private const val BASE_URL = "http://10.102.203.118/cursos_api/"; //aqui va la url del api
 
     private val jsonConfig= Json{
         ignoreUnknownKeys=true
@@ -16,11 +16,14 @@ object RetrofitCliente {
         isLenient=true
     }
 
-    val apiService : ApiServicio by lazy{
-        val contenType="application/json".toMediaType()
+    val apiService: ApiServicio by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(jsonConfig.asConverterFactory(contenType))
+            .addConverterFactory(
+                jsonConfig.asConverterFactory(
+                    "application/json; charset=UTF-8".toMediaType()
+                )
+            )
             .build()
             .create(ApiServicio::class.java)
     }
