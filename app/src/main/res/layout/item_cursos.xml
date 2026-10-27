@@ -32,9 +32,10 @@
             android:paddingStart="6dp"
             android:paddingTop="6dp"
             android:paddingEnd="6dp"
-            android:textColor="@color/black"
+            android:textColor="#1A1A1A"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="PROGRAMACIÓN AVANZADA" />
 
         <!-- Salón / Ubicación -->
         <TextView
@@ -42,8 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
-            android:textSize="12sp" />
+            android:textColor="#555555"
+            android:textSize="12sp"
+            tools:text="Salón: A-102" />
 
         <!-- Contenedor de Botones -->
         <LinearLayout
@@ -52,13 +54,12 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <!-- Botón Ver Detalle (Azul) -->
             <Button
                 android:id="@+id/btnVerDetalle"
                 android:layout_width="0dp"
-                android:layout_height="34dp"
+                android:layout_height="36dp"
                 android:layout_weight="1"
-
+                android:backgroundTint="#085394"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:minWidth="0dp"
@@ -66,17 +67,16 @@
                 android:padding="0dp"
                 android:text="VER DETALLE"
                 android:textColor="@android:color/white"
-                android:textSize="9sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
 
-            <!-- Botón Registrarse (Verde) -->
             <Button
                 android:id="@+id/btnRegistrarse"
                 android:layout_width="0dp"
-                android:layout_height="34dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-
+                android:backgroundTint="#2E7D32"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:minWidth="0dp"
@@ -84,7 +84,7 @@
                 android:padding="0dp"
                 android:text="REGISTRARSE"
                 android:textColor="@android:color/white"
-                android:textSize="9sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
