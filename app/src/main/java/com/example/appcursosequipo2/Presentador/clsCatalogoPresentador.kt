@@ -34,7 +34,7 @@ class clsCatalogoPresentador(val vista: MainActivity) {
     fun seleccionarCarrera(posicion: Int) {
         if (posicion >= 0 && posicion < listaCarreras.size) {
             val carrera = listaCarreras[posicion]
-            // Si es id 0 ("Todas"), enviamos null para que la API traiga todo
+            // Si es id 0 ("Todas"), enviamos null para que la API traigatodo
             val carreraId = if (carrera.id == 0) null else carrera.id
             cargarCursos(carreraId)
         }
@@ -52,12 +52,12 @@ class clsCatalogoPresentador(val vista: MainActivity) {
         }
     }
     // Botón "Ver detalle" de la tarjeta
-    /*fun seleccionarCurso(curso: dataCursos) {
-        vista.abrirDetalleCurso(curso.id)
+    fun seleccionarCurso(curso: dataCursos) {
+
     }
 
     // Botón "Registrarse" de la tarjeta
     fun registrarseCurso(curso: dataCursos) {
-        vista.abrirRegistro(curso.id, curso.nombre, curso.urlImagenPrincipal)
-    }*/
+
+    }
 }

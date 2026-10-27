@@ -36,9 +36,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        spinnerCarreras = findViewById(R.id.snpCarreras)
-        recyclerCursos = findViewById(R.id.recyclerCursos)
-        //btnVerRegistros = findViewById(R.id.btnDetalle)
+        spinnerCarreras = findViewById(R.id.spnCarreras)
+        recyclerCursos = findViewById(R.id.rvCursos)
+        btnVerRegistros = findViewById(R.id.btnVerRegistros)
 
         // Catálogo en 2 columnas
         recyclerCursos.layoutManager = GridLayoutManager(this, 2)
@@ -92,13 +92,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Los llama el adaptador desde los botones de cada tarjeta
-    /*fun seleccionarCurso(curso: dataCursos) {
+    fun seleccionarCurso(curso: dataCursos) {
         presenter.seleccionarCurso(curso)
     }
 
     fun registrarseCurso(curso: dataCursos) {
         presenter.registrarseCurso(curso)
-    }*/
+    }
 
     /*fun abrirDetalleCurso(id: Int) {
         val intent = Intent(this, DetalleCursoActivity::class.java)
