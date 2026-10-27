@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appcursosequipo2.Adapatdor.CursosAdaptador
 import com.example.appcursosequipo2.Modelo.dataCarreras
 import com.example.appcursosequipo2.Modelo.dataCursos
+import com.example.appcursosequipo2.Modelo.dataDetalleCursos
 import com.example.appcursosequipo2.Presentador.clsCatalogoPresentador
 
 class MainActivity : AppCompatActivity() {
@@ -100,21 +101,23 @@ class MainActivity : AppCompatActivity() {
         presenter.registrarseCurso(curso)
     }
 
-    /*fun abrirDetalleCurso(id: Int) {
-        val intent = Intent(this, DetalleCursoActivity::class.java)
+    fun abrirDetalleCurso(id: Int) {
+        val intent = Intent(this, detalleCursoActivity::class.java)
         intent.putExtra("CURSO_ID", id)
         startActivity(intent)
-    }*/
+    }
 
-    /*fun abrirRegistro(id: Int, nombre: String, urlImagen: String) {
-        val intent = Intent(this, RegistroActivity::class.java)
+    fun abrirRegistro(id: Int, nombre: String, urlImagen: String) {
+        val intent = Intent(this, RegistroCursoActivity::class.java)
         intent.putExtra("CURSO_ID", id)
         intent.putExtra("NOMBRE_CURSO", nombre)
         intent.putExtra("URL_IMAGEN", urlImagen)
         startActivity(intent)
-    }*/
+    }
 
     fun mostrarError(mensaje: String) {
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
+
+
 }

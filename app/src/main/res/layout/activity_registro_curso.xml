@@ -1,158 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    tools:context=".Vista.RegistroCursoActivity">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- Barra Superior -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#1565A8"
-        app:title="REGISTRO AL CURSO"
-        app:titleTextColor="@android:color/white"
-        />
+        android:layout_height="wrap_content"
+        android:background="#0082A0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="←"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRO AL CURSO"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ScrollView corregido con '>' al final -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <TextView
-                android:id="@+id/txtNombreCurso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="14dp"
                 android:gravity="center"
-                android:text="."
-                android:textColor="#111111"
+                android:text="INSCRIPCIÓN:"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:background="#EEF1F3"
-                android:padding="4dp"
-                android:layout_marginBottom="12dp">
+                android:orientation="horizontal"
+                android:padding="6dp">
 
                 <ImageView
-                    android:id="@+id/imgCurso"
-                    android:layout_width="90dp"
-                    android:layout_height="62dp"
-                    android:scaleType="centerCrop" />
+                    android:id="@+id/imgCursoRegistro"
+                    android:layout_width="96dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/txtCurso"
+                    android:id="@+id/txtCursoRegistro"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="."
-                    android:textColor="#111111"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
-
+                    android:textStyle="bold"
+                    tools:text="Nombre del Curso" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
                 android:text="MATRÍCULA DEL ALUMNO:"
-                android:textColor="#111111"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp" />
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtMatricula"
+                android:id="@+id/etMatricula"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:hint="Matrícula"
                 android:inputType="number"
+                android:maxLength="15"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
-            <!-- Fecha -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
                 android:text="FECHA DE REGISTRO:"
-                android:textColor="#111111"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="18dp" />
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/txtFecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="DD/MM/YY"
-                android:inputType="date"
-                android:textColor="#000000" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CORREO INSTITUCIONAL:"
-                android:textColor="#111111"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="18dp" />
-
-            <EditText
-                android:id="@+id/txtCorreo"
+                android:id="@+id/etFecha"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                android:focusable="false"
+                android:hint="DD/MM/YYYY"
+                android:inputType="none"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textSize="18sp" />
 
-                android:hint="correo@uthh.edu"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="CORREO INSTITUCIONAL:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="6dp"
+                android:hint="Correo"
                 android:inputType="textEmailAddress"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnConfirmar"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#59A41D"
+                android:layout_height="58dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#4B871C"
                 android:text="CONFIRMAR INSCRIPCIÓN"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnCancelar"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="14dp"
-                android:backgroundTint="#909090"
-                android:text="CANCEL"
-                android:textColor="#111111"
+                android:layout_marginTop="10dp"
+                android:text="CANCELAR"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

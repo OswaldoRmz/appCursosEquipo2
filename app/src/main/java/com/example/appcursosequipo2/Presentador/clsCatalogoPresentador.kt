@@ -53,11 +53,11 @@ class clsCatalogoPresentador(val vista: MainActivity) {
     }
     // Botón "Ver detalle" de la tarjeta
     fun seleccionarCurso(curso: dataCursos) {
-
+        vista.abrirDetalleCurso(curso.id)
     }
 
     // Botón "Registrarse" de la tarjeta
     fun registrarseCurso(curso: dataCursos) {
-
+        vista.abrirRegistro(curso.id, curso.nombre, curso.urlImagenPrincipal)
     }
 }
