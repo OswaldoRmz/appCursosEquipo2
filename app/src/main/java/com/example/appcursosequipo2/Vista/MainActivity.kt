@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         configurarListeners()
         presenter.iniciar()
     }
+    // Evento de selección en el Spinner de Carreras
     private fun configurarListeners() {
         spinnerCarreras.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -83,6 +84,8 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCarreras.adapter = adapter
     }
+    // Actualiza el listado de cursos en el RecyclerView.
+
 
     fun mostrarCursos(cursos: List<dataCursos>) {
         if (cursos != null) {
@@ -106,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("CURSO_ID", id)
         startActivity(intent)
     }
-
+    //formulario de registro para el curso seleccionado
     fun abrirRegistro(id: Int, nombre: String, urlImagen: String) {
         val intent = Intent(this, RegistroCursoActivity::class.java)
         intent.putExtra("CURSO_ID", id)
