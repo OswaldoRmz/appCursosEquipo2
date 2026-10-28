@@ -6,17 +6,19 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.appcursosequipo2.R
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.appcursosequipo2.Modelo.dataCursos
+import com.example.appcursosequipo2.R
 import com.example.appcursosequipo2.Vista.MainActivity
+
 class CursosAdaptador(
     private val activity: MainActivity,
     private var listaCursos: List<dataCursos>
 ) : RecyclerView.Adapter<CursosAdaptador.CursoViewHolder>() {
 
     class CursoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // VERIFICA QUE ESTOS IDs EXISTAN EN TU item_curso.xml
         val imgCurso: ImageView = itemView.findViewById(R.id.imgCurso)
         val txtNombreCurso: TextView = itemView.findViewById(R.id.txtNombreCurso)
         val txtSalonCurso: TextView = itemView.findViewById(R.id.txtSalonCurso)

@@ -9,8 +9,11 @@ data class dataCursos(
     @SerialName("nombre") val nombre: String = "",
     @SerialName("descripcion") val descripcion: String = "",
     @SerialName("espacio") val salon: String = "",
-    @SerialName("cupo") val cupo: String = "",
+    @SerialName("horas") val horas: Int = 0,
+    @SerialName("dias") val dias: String = "",
+    @SerialName("cupo") val cupo: Int = 0,
     @SerialName("imagen_url") val urlImagenPrincipal: String = "",
     @SerialName("id_carrera") val carreraId: Int = 0,
+    @SerialName("inscritos") val inscritosRow: Int = 0
 
 )

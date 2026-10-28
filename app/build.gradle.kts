@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.recyclerview)
+    implementation(libs.filament.android)
     implementation(libs.material)
     implementation(libs.protolite.well.known.types)
     testImplementation(libs.junit)

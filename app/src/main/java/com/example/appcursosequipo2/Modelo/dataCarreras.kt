@@ -7,6 +7,8 @@ import kotlinx.serialization.Serializable
 data class dataCarreras(
     @SerialName(value = "id_carrera") val id: Int = 0,
     @SerialName(value = "nombre") val carrera: String = ""
-
-
-)
+) {
+    override fun toString(): String {
+        return carrera
+    }
+}

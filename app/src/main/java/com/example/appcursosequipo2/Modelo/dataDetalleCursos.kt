@@ -10,6 +10,6 @@ data class dataDetalleCursos(
     @SerialName("espacio") val espacio: String = "Por asignar",
     @SerialName("horas") val totalHoras: Int = 0,
     @SerialName("dias") val diasAtencion: String = "",
-    @SerialName("cupo") val cupoTotal: String = "",
+    @SerialName("cupo") val cupoTotal: Int = 0,
     @SerialName("imagen_url") val urlImagenDetalle: String = ""
 )

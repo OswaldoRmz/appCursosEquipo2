@@ -70,9 +70,9 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-        /*btnVerRegistros.setOnClickListener {
-            startActivity(Intent(this, EstadoInscripcionesActivity::class.java))
-        }*/
+        btnVerRegistros.setOnClickListener {
+            startActivity(Intent(this, estadoInscripcionesActivity::class.java))
+        }
     }
 
     fun mostrarCarreras(carreras: List<dataCarreras>) {

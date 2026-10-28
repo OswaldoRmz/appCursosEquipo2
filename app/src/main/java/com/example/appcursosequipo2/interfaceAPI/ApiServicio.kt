@@ -27,6 +27,5 @@ interface ApiServicio {
     // Registrar inscripción (POST)
     @POST("inscribir_alumno.php")
     fun registrarInscripcion(@Body request: RegistroRequest): Call<RegistroResponse>
-    @GET(value = "obtener_estado_inscripciones.php")
-    suspend fun obtenerEstadoInscripciones(@Query(value = "carrera_id") carreraId: Int): dataEstadoInscripcion
+
 }
