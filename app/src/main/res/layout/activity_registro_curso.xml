@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -11,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0082A0"
+        android:background="#0D47A1"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -34,7 +35,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- ScrollView corregido con '>' al final -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="INSCRIPCIÓN:"
+                android:textColor="#0D47A1"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -85,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
                 android:text="MATRÍCULA DEL ALUMNO:"
+                android:textColor="#333333"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -105,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:text="FECHA DE REGISTRO:"
+                android:textColor="#333333"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -128,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:text="CORREO INSTITUCIONAL:"
+                android:textColor="#333333"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -147,11 +151,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="#4B871C"
                 android:text="CONFIRMAR INSCRIPCIÓN"
                 android:textColor="@android:color/white"
                 android:textSize="17sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:backgroundTint="#2E7D32" />
 
             <Button
                 android:id="@+id/btnCancelar"
@@ -159,8 +163,11 @@
                 android:layout_height="52dp"
                 android:layout_marginTop="10dp"
                 android:text="CANCELAR"
+                android:textColor="@android:color/white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:backgroundTint="#D32F2F" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
