@@ -11,7 +11,7 @@
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#136BC3"
+        android:background="#136BC2"
         android:gravity="center"
         android:padding="16dp"
         android:text="CATÁLOGO DE CURSOS"
