@@ -7,11 +7,13 @@ class clsEstadoModelo {
 
     suspend fun obtenerEstadoInscripciones(carreraId: Int): List<dataEstadoCurso> = withContext(Dispatchers.IO) {
         try {
+            //realizar peticion a la base de datos
             val response = RetrofitCliente.apiService.getCursos(carreraId).execute()
 
             if (response.isSuccessful) {
                 val cursos = response.body() ?: emptyList()
 
+                // Convierte los datos recibidos de la API al formato que usa la app
                 cursos.map { curso ->
                     dataEstadoCurso(
                         idCurso = curso.id,
