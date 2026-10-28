@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4867FB"
+        android:background="#136BC2"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -45,7 +45,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical"
             android:padding="4dp">
 
@@ -62,7 +61,7 @@
             android:layout_marginTop="8dp"
             android:gravity="end"
             android:text="Total: 0"
-
+            android:background="#1321"
             android:textSize="16sp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -76,7 +75,7 @@
             android:id="@+id/btnVolverCatalogo"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-
+            android:backgroundTint="#073763"
             android:text="VOLVER AL CATÁLOGO"
             android:textColor="@android:color/white"
             android:textSize="18sp"
