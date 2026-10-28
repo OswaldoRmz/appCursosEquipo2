@@ -71,6 +71,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:backgroundTint="#2E7D32" />
+            <!--comentario de funcionamiento-->
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
