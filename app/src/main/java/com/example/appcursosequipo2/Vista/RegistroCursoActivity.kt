@@ -3,6 +3,7 @@ import android.widget.ImageView
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
@@ -46,6 +47,7 @@ class RegistroCursoActivity : AppCompatActivity() {
         btnCancelar = findViewById(R.id.btnCancelar)
         btnAtras = findViewById(R.id.btnAtras)
 
+        etMatricula.setOnEditorActionListener(this::buscardatos)
         cursoId = intent.getIntExtra("CURSO_ID", 0)
         txtCurso.text = (intent.getStringExtra("NOMBRE_CURSO") ?: "").uppercase()
         val urlImagen = intent.getStringExtra("URL_IMAGEN") ?: ""
@@ -64,35 +66,21 @@ class RegistroCursoActivity : AppCompatActivity() {
         establecerFecha(Calendar.getInstance())
         etFecha.setOnClickListener { mostrarCalendario() }
 
-        // Evento al escribir o terminar de escribir la matrícula
-        etMatricula.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus && etMatricula.text.isNotEmpty()) {
-                presenter.buscarAlumno(etMatricula.text.toString().trim())
-            }
-        }
-
-        etMatricula.setOnEditorActionListener { _, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH) {
-                presenter.buscarAlumno(etMatricula.text.toString().trim())
-                true
-            } else {
-                false
-            }
-        }
-
-        btnConfirmar.setOnClickListener {
-            presenter.registrar(cursoId, etMatricula.text.toString().trim())
-        }
+        btnConfirmar.setOnClickListener { presenter.registrar(cursoId, etMatricula.text.toString().trim()) }
 
         btnCancelar.setOnClickListener { finish() }
-        btnAtras.setOnClickListener { finish() }
 
     }
     private fun establecerFecha(cal: Calendar) {
         val formatoVisible = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         etFecha.setText(formatoVisible.format(cal.time))
     }
-
+    fun buscardatos(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
+        if (actionId == EditorInfo.IME_ACTION_DONE) {
+            presenter.buscarAlumno(etMatricula.text.toString().trim())
+        }
+        return false
+    }
     private fun mostrarCalendario() {
         val cal = Calendar.getInstance()
         DatePickerDialog(

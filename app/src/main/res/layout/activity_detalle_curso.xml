@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,13 +10,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="68dp"
         android:background="#3F51B5"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,7 +42,6 @@
                     android:id="@+id/txtNombreDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -52,7 +49,6 @@
                     android:id="@+id/txtCodigoDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="16sp" />
 
                 <TextView
@@ -60,7 +56,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="DESCRIPCIÓN:"
-
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -68,7 +63,6 @@
                     android:id="@+id/txtDescripcionDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="15sp" />
 
                 <TextView
@@ -76,7 +70,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="ESPACIO:"
-
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -84,7 +77,6 @@
                     android:id="@+id/txtEspacioDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="15sp" />
 
                 <TextView
@@ -92,7 +84,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="TOTAL HORAS:"
-
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -100,7 +91,6 @@
                     android:id="@+id/txtHorasDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="15sp" />
 
                 <TextView
@@ -108,7 +98,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="DÍAS DE ATENCIÓN:"
-
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -116,7 +105,6 @@
                     android:id="@+id/txtDiasDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>

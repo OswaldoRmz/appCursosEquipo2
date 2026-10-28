@@ -121,6 +121,4 @@ class MainActivity : AppCompatActivity() {
     fun mostrarError(mensaje: String) {
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
-
-
 }

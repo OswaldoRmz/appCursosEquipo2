@@ -22,7 +22,7 @@ class detalleCursoActivity : AppCompatActivity() {
     private lateinit var txtEspacio: TextView
     private lateinit var txtHoras: TextView
     private lateinit var txtDias: TextView
-    private lateinit var btnAtras: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,7 +32,7 @@ class detalleCursoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // 1. Enlazar componentes XML
+
         imgDetalle = findViewById(R.id.imgDetalle)
         txtNombre = findViewById(R.id.txtNombreDetalle)
         txtCodigo = findViewById(R.id.txtCodigoDetalle)
@@ -40,14 +40,11 @@ class detalleCursoActivity : AppCompatActivity() {
         txtEspacio = findViewById(R.id.txtEspacioDetalle)
         txtHoras = findViewById(R.id.txtHorasDetalle)
         txtDias = findViewById(R.id.txtDiasDetalle)
-        btnAtras = findViewById(R.id.btnAtras)
 
-        btnAtras.setOnClickListener { finish() }
-
-        // 2. Obtener el id del curso enviado desde MainActivity
+        //Obtener el id del curso enviado desde MainActivity
         val cursoId = intent.getIntExtra("CURSO_ID", 0)
 
-        // 3. Inicializar presentador y cargar el detalle
+        //Inicializar presentador y cargar el detalle
         presenter = clsDetalleCursoPresentador(this)
         if (cursoId != 0) {
             presenter.cargarDetalle(cursoId)
