@@ -3,6 +3,7 @@ package com.example.appcursosequipo2.Modelo
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+//almacena el estado de las inscripciones y el cupo de cada curso
 @Serializable
 data class dataEstadoCurso(
     @SerialName("id_cursos") val idCurso: Int = 0,
