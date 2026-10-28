@@ -3,6 +3,7 @@ package com.example.appcursosequipo2.Modelo
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+//modelo que almacena la informacion de las carreras
 @Serializable
 data class dataCarreras(
     @SerialName(value = "id_carrera") val id: Int = 0,
