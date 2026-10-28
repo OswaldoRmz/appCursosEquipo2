@@ -16,7 +16,8 @@
         <ImageView
             android:id="@+id/imgCurso"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
+            android:contentDescription="Imagen del curso"
             android:scaleType="centerCrop" />
 
         <TextView
@@ -30,7 +31,6 @@
             android:paddingStart="6dp"
             android:paddingTop="6dp"
             android:paddingEnd="6dp"
-
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
             android:textSize="12sp" />
 
         <LinearLayout
@@ -51,35 +50,28 @@
             <Button
                 android:id="@+id/btnVerDetalle"
                 android:layout_width="0dp"
-                android:layout_height="34dp"
+                android:layout_height="48dp"
                 android:layout_weight="1"
-
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
                 android:padding="0dp"
                 android:text="VER DETALLE"
-                android:textColor="@android:color/white"
-                android:textSize="9sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0D47A1" />
 
             <Button
                 android:id="@+id/btnRegistrarse"
                 android:layout_width="0dp"
-                android:layout_height="34dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
                 android:padding="0dp"
                 android:text="REGISTRARSE"
-                android:textColor="@android:color/white"
-                android:textSize="9sp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#2E7D32" />
+            <!--comentario de funcionamiento-->
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
