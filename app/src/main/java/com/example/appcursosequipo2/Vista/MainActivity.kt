@@ -84,8 +84,6 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCarreras.adapter = adapter
     }
-    // Actualiza el listado de cursos en el RecyclerView.
-
 
     fun mostrarCursos(cursos: List<dataCursos>) {
         if (cursos != null) {

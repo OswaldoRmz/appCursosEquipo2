@@ -17,5 +17,4 @@ data class dataCursos(
     @SerialName("id_carrera") val carreraId: Int = 0,
     @SerialName("inscritos") val inscritosRow: Int = 0
 
-    //datos convertidos a formato JSON
 )

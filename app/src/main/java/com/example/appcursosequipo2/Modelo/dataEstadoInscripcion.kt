@@ -1,8 +1,9 @@
 package com.example.appcursosequipo2.Modelo
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-//agrupa la lista de cursos y su cantidad total
+@Serializable
 data class dataEstadoInscripcion(
     @SerialName("total") val total: Int = 0,
     @SerialName("cursos") val cursos: List<dataEstadoCurso> = emptyList()
